@@ -1,0 +1,137 @@
+/* DayPlay — "Dawn over still water".
+   Uygulamayla aynı palet ve tipografi ritmi; düşük uyaran, tek sıcak vurgu. */
+:root {
+  --petrol-900: #071f25;
+  --petrol-700: #0e3a43;
+  --petrol-500: #2a6b77;
+  --petrol-300: #8fbfc7;
+  --apricot: #d97f3e;
+  --apricot-soft: #f4a261;
+  --bg: #f4f3f0;
+  --surface: #fbfaf8;
+  --outline: #d8d5cf;
+  --ink: #1c2a2e;
+  --ink-2: #5a6b6f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c181c;
+    --surface: #102025;
+    --outline: #2c444b;
+    --ink: #e9efef;
+    --ink-2: #9fb3b6;
+    --apricot: #f4a261;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  padding: 0 20px 80px;
+}
+
+.wrap { max-width: 720px; margin: 0 auto; }
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 40px 0 8px;
+}
+
+.mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(160deg, var(--petrol-500), var(--petrol-900));
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.mark svg { width: 26px; height: 26px; display: block; }
+
+.brand { font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+.brand span { display: block; font-size: 13px; font-weight: 400; color: var(--ink-2); }
+
+nav { display: flex; gap: 18px; flex-wrap: wrap; padding: 18px 0 28px; }
+
+nav a {
+  color: var(--ink-2);
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--apricot);
+}
+
+h1 {
+  font-size: clamp(28px, 6vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 12px 0 6px;
+}
+
+h2 {
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  margin: 36px 0 8px;
+}
+
+.lede { color: var(--ink-2); font-size: 18px; margin-top: 0; }
+
+.updated {
+  color: var(--ink-2);
+  font-size: 14px;
+  border: 1px solid var(--outline);
+  border-radius: 999px;
+  padding: 4px 12px;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+p, li { color: var(--ink); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+
+a { color: var(--apricot); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  border-radius: 18px;
+  padding: 20px 22px;
+  margin: 22px 0;
+}
+
+.card h2 { margin-top: 0; }
+
+.lang {
+  margin: 34px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--outline);
+  color: var(--ink-2);
+  font-size: 15px;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--outline);
+  color: var(--ink-2);
+  font-size: 14px;
+}
+
+footer a { color: var(--ink-2); }
