@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://halilberkayy.github.io/dayplay/sitemap.xml

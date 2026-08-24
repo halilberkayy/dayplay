@@ -4,15 +4,115 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Support · DayPlay</title>
-<meta name="description" content="DayPlay plays your routines step by step. ADHD friendly, no account, no tracking.">
+<meta name="description" content="DayPlay help: why the alarm rings in Silent mode, what mission lock does, snoozes, subscriptions and moving routines to a new phone.">
+<link rel="canonical" href="https://halilberkayy.github.io/dayplay/support.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Halil Berkay Şahin">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DayPlay">
+<meta property="og:title" content="Support · DayPlay">
+<meta property="og:description" content="DayPlay help: why the alarm rings in Silent mode, what mission lock does, snoozes, subscriptions and moving routines to a new phone.">
+<meta property="og:url" content="https://halilberkayy.github.io/dayplay/support.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Support · DayPlay">
+<meta name="twitter:description" content="DayPlay help: why the alarm rings in Silent mode, what mission lock does, snoozes, subscriptions and moving routines to a new phone.">
+<meta name="apple-itunes-app" content="app-id=6798274759">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does DayPlay ring when my iPhone is on silent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. On iOS 26 and later DayPlay uses Apple's AlarmKit, the same framework the built in Clock app uses, so the alarm rings through Silent mode, Focus and Do Not Disturb. On iOS 25 and earlier DayPlay falls back to a burst of time sensitive notifications, which does not break Silent mode, and the app tells you so on screen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is mission lock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mission lock means the alarm does not stop when you press stop. Pressing stop opens DayPlay on the first step of your routine and the alarm keeps ringing inside the app until that step is finished. There is no dismiss button while it is locked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get around mission lock by force quitting the app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for long. When the mission is locked and the app is sent to the background, DayPlay schedules a one shot system alarm about 90 seconds later, so force quitting delays the alarm instead of ending it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many times can I snooze?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You choose, from zero to three, per routine. Snoozes are counted. When they run out the snooze button is not shown at all."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My alarm did not ring",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check iOS Settings, DayPlay, and make sure Alarms are allowed. If you are on iOS 25 or earlier there is no system alarm permission and DayPlay uses notifications instead, so Focus modes, Low Power Mode and Scheduled Summary can hold it back."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I paid but Pro is not on",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open Settings in the app and tap Restore purchase. Make sure you are signed in with the same Apple ID used for the purchase. If it still does not appear, email info@thecodevolt.com with the date of purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I cancel my subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iOS Settings, your name, Subscriptions, DayPlay. Or tap Manage subscription in the app's Settings. Cancelling stops the next renewal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I move my routines to a new phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Settings, Export routines as JSON on the old phone, then Settings, Import on the new one and paste it. Real alarms are not switched on automatically by an import, so nobody wakes you at 7am by accident."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DayPlay treat ADHD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is a focus and routine tool designed to be friendly to ADHD brains. It is not a medical treatment or a diagnostic tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I delete my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delete the app. Everything DayPlay stores on your device lives in its own container, so removing the app removes all of it. To stop the anonymous usage counters without deleting the app, turn them off in Settings, Privacy."
+      }
+    }
+  ]
+}</script>
 </head>
 <body>
 <div class="wrap">
 <header>
   <div class="mark"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#8fbfc7" stroke-opacity=".45" stroke-width="2.4"/><path d="M12 3a9 9 0 0 1 6.6 15.1" stroke="#f4a261" stroke-width="2.4" stroke-linecap="round"/><path d="M10.4 8.6 15.6 12l-5.2 3.4z" fill="#f4a261" stroke="#f4a261" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-  <div class="brand">DayPlay<span>Play your day</span></div>
+  <div class="brand">DayPlay<span>The alarm you can't snooze away</span></div>
 </header>
 <nav><a href="index.html">DayPlay</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html" aria-current="page">Support</a></nav>
 <main>
@@ -25,47 +125,60 @@ person reads it.</p>
 <div class="card">
 <h2>Email</h2>
 <p><a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a></p>
-<p>Include your app version (Settings, at the bottom) and your device model.
-It saves a round trip.</p>
+<p>Include your app version (Settings, at the bottom), your iOS version and your
+device model. It saves a round trip.</p>
 </div>
 
 <h2>Common questions</h2>
-
-<h3>My reminder did not arrive</h3>
-<p>Check iOS Settings &gt; DayPlay &gt; Notifications. Focus modes, Low Power
-Mode, and Scheduled Summary can all hold a reminder back. DayPlay schedules
-reminders locally, so notifications must be allowed for the app itself.</p>
-
+<h3>Does DayPlay ring when my iPhone is on silent?</h3>
+<p>Yes. On iOS 26 and later DayPlay uses Apple's AlarmKit, the same framework the built in Clock app uses, so the alarm rings through Silent mode, Focus and Do Not Disturb. On iOS 25 and earlier DayPlay falls back to a burst of time sensitive notifications, which does not break Silent mode, and the app tells you so on screen.</p>
+<h3>What is mission lock?</h3>
+<p>Mission lock means the alarm does not stop when you press stop. Pressing stop opens DayPlay on the first step of your routine and the alarm keeps ringing inside the app until that step is finished. There is no dismiss button while it is locked.</p>
+<h3>Can I get around mission lock by force quitting the app?</h3>
+<p>Not for long. When the mission is locked and the app is sent to the background, DayPlay schedules a one shot system alarm about 90 seconds later, so force quitting delays the alarm instead of ending it.</p>
+<h3>How many times can I snooze?</h3>
+<p>You choose, from zero to three, per routine. Snoozes are counted. When they run out the snooze button is not shown at all.</p>
+<h3>My alarm did not ring</h3>
+<p>Check iOS Settings, DayPlay, and make sure Alarms are allowed. If you are on iOS 25 or earlier there is no system alarm permission and DayPlay uses notifications instead, so Focus modes, Low Power Mode and Scheduled Summary can hold it back.</p>
 <h3>I paid but Pro is not on</h3>
-<p>Open Settings in the app and tap Restore purchase. Make sure you are signed in
-with the same Apple ID used for the purchase. If it still does not appear, email
-us with the date of purchase.</p>
-
+<p>Open Settings in the app and tap Restore purchase. Make sure you are signed in with the same Apple ID used for the purchase. If it still does not appear, email info@thecodevolt.com with the date of purchase.</p>
 <h3>How do I cancel my subscription?</h3>
-<p>iOS Settings &gt; your name &gt; Subscriptions &gt; DayPlay, or tap Manage
-subscription in the app's Settings. Cancelling stops the next renewal.</p>
-
+<p>iOS Settings, your name, Subscriptions, DayPlay. Or tap Manage subscription in the app's Settings. Cancelling stops the next renewal.</p>
 <h3>How do I move my routines to a new phone?</h3>
-<p>Settings &gt; Export routines (JSON) on the old phone, then Settings &gt;
-Import on the new one and paste it.</p>
-
+<p>Settings, Export routines as JSON on the old phone, then Settings, Import on the new one and paste it. Real alarms are not switched on automatically by an import, so nobody wakes you at 7am by accident.</p>
 <h3>Does DayPlay treat ADHD?</h3>
-<p>No. It is a focus and routine tool designed to be friendly to ADHD brains. It
-is not a medical treatment or diagnostic tool.</p>
-
+<p>No. It is a focus and routine tool designed to be friendly to ADHD brains. It is not a medical treatment or a diagnostic tool.</p>
 <h3>How do I delete my data?</h3>
-<p>Delete the app. Everything DayPlay stores lives in its own container on your
-device, so removing the app removes all of it. There is no server copy.</p>
+<p>Delete the app. Everything DayPlay stores on your device lives in its own container, so removing the app removes all of it. To stop the anonymous usage counters without deleting the app, turn them off in Settings, Privacy.</p>
 
-<div class="lang">
+<div class="lang" lang="tr">
 <h2>Türkçe</h2>
-<p>Soru, hata ya da öneri için
-<a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a> adresine yaz;
-uygulama sürümünü (Ayarlar'ın en altında) ve cihaz modelini eklersen daha hızlı
-çözeriz. Hatırlatma gelmiyorsa iOS Ayarlar &gt; DayPlay &gt; Bildirimler'i ve
-odak modlarını kontrol et. Satın alman görünmüyorsa Ayarlar &gt; "Satın alımı
-geri yükle". Rutinlerini taşımak için Ayarlar &gt; dışa aktar, yeni telefonda
-içe aktar. Verini silmek için uygulamayı silmen yeterli; sunucuda kopya yok.</p>
+<h3>Sessiz moddayken alarm çalar mı?</h3>
+<p>iOS 26 ve üstünde evet: DayPlay, Saat uygulamasının kullandığı AlarmKit
+altyapısını kullanır, yani sessiz modu, Odak'ı ve Rahatsız Etmeyin'i deler.
+iOS 25 ve altında sistem alarmı yoktur; uygulama bildirim salvosuna düşer,
+sessiz modu delmez ve bunu ekranda açıkça söyler.</p>
+<h3>Görev kilidi nedir?</h3>
+<p>Alarmın "durdur" butonu seni yatağa değil rutinin ilk adımına götürür ve
+alarm o adım bitene kadar uygulama içinde çalmaya devam eder. Kilit açıkken
+kapatma butonu yoktur.</p>
+<h3>Uygulamayı kapatırsam alarm susar mı?</h3>
+<p>Uzun süre değil. Kilit açıkken uygulama arka plana atılırsa DayPlay yaklaşık
+90 saniye sonrası için tek seferlik bir sistem alarmı kurar; kapatmak alarmı
+bitirmez, geciktirir.</p>
+<h3>Kaç kez erteleyebilirim?</h3>
+<p>Rutin başına sen seçersin: 0 ile 3 arası. Haklar sayılır, bitince erteleme
+butonu hiç çizilmez.</p>
+<h3>Aboneliğimi nasıl iptal ederim?</h3>
+<p>iOS Ayarlar &gt; adın &gt; Abonelikler &gt; DayPlay. Ya da uygulama
+Ayarlar'ından "Aboneliği yönet". İptal, bir sonraki yenilemeyi durdurur.</p>
+<h3>Verimi nasıl silerim?</h3>
+<p>Uygulamayı silmen yeterli; sunucuda kopya yok. Uygulamayı silmeden yalnız
+anonim sayaçları durdurmak istersen Ayarlar &gt; Mahremiyet &gt; Kullanım
+sayaçları'nı kapat.</p>
+<p>Diğer her şey için:
+<a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a> — uygulama sürümünü (Ayarlar'ın en
+altında), iOS sürümünü ve cihaz modelini eklersen daha hızlı çözeriz.</p>
 </div>
 
 </main>

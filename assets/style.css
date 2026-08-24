@@ -135,3 +135,52 @@ footer {
 }
 
 footer a { color: var(--ink-2); }
+
+/* --- 1.1 --------------------------------------------------------------- */
+
+h3 {
+  font-size: 16px;
+  margin: 24px 0 4px;
+}
+
+/* Tek belirgin eylem: App Store'a giden buton. Sayfada BAŞKA buton yok —
+   ikinci bir CTA birincinin tıklanma oranını doğrudan böler. */
+.cta {
+  display: inline-block;
+  background: var(--apricot);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 12px 22px;
+  margin: 4px 0 8px;
+}
+
+.cta:hover { filter: brightness(1.06); }
+
+/* Gizlilik tablosu: ne toplanıyor / neden / kim işliyor / hukuki dayanak.
+   Dar ekranda yatay kaydırılır, sayfanın kendisi kaymaz. */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 15px;
+  display: block;
+  overflow-x: auto;
+}
+
+th, td {
+  border: 1px solid var(--outline);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  min-width: 140px;
+}
+
+th {
+  background: var(--surface);
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.lang h3 { font-size: 15px; }

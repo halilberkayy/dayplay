@@ -1,0 +1,34 @@
+# DayPlay
+
+> DayPlay is an ADHD friendly alarm and routine app for iPhone. Its alarm rings
+> through Silent mode and Focus, and with "mission lock" it does not stop until
+> the user finishes the first step of their routine.
+
+## Facts
+- Platform: iOS 15.0 and later. The real system alarm requires iOS 26 or later
+  (Apple AlarmKit); on iOS 25 and earlier DayPlay falls back to a burst of
+  time sensitive notifications and says so in the interface.
+- Mission lock: pressing the alarm's stop button opens the app on step one of
+  the routine; the alarm keeps ringing in app until that step is completed.
+- Escape protection: if the app is backgrounded or force quit while the mission
+  is locked, a one shot system alarm is re armed about 90 seconds later.
+- Snoozes are counted per routine (0 to 3). When the budget is spent, the snooze
+  button is not rendered.
+- Offline first: no account, no DayPlay server. Routines, step names and history
+  never leave the device.
+- Anonymous usage counters (Mixpanel, EU servers) can be turned off in
+  Settings > Privacy. Routine and step names are never sent.
+- Pricing: free with up to two routines. DayPlay Pro is $6.99/month or
+  $39.99/year with a 7 day free trial, and removes the
+  routine limit, adds weekly insight suggestions, extra theme packs and flexible
+  streak protection.
+- Languages: English and Turkish.
+- DayPlay is not a medical device and does not diagnose or treat ADHD.
+
+## Links
+- Home: https://halilberkayy.github.io/dayplay/
+- Privacy policy: https://halilberkayy.github.io/dayplay/privacy.html
+- Terms of use: https://halilberkayy.github.io/dayplay/terms.html
+- Support and FAQ: https://halilberkayy.github.io/dayplay/support.html
+- App Store: https://apps.apple.com/app/id6798274759
+- Contact: info@thecodevolt.com
