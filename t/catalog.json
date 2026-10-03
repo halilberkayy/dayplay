@@ -1,0 +1,20 @@
+{
+  "templates": [
+    {"key": "morning", "nameEn": "Morning routine", "nameTr": "Sabah rutini", "steps": 5, "minutes": 35},
+    {"key": "evening", "nameEn": "Evening routine", "nameTr": "Akşam rutini", "steps": 5, "minutes": 22},
+    {"key": "focus", "nameEn": "Start work", "nameTr": "İşe başlama", "steps": 5, "minutes": 37},
+    {"key": "study", "nameEn": "Study session", "nameTr": "Ders çalışma", "steps": 5, "minutes": 61},
+    {"key": "home", "nameEn": "Tidy up", "nameTr": "Ev toparlama", "steps": 4, "minutes": 30},
+    {"key": "morning5", "nameEn": "5 minute morning", "nameTr": "5 dakikalık sabah", "steps": 4, "minutes": 5},
+    {"key": "leave", "nameEn": "Out the door", "nameTr": "Kapıdan çıkış", "steps": 4, "minutes": 7},
+    {"key": "reset", "nameEn": "Midday reset", "nameTr": "Gün ortası sıfırlama", "steps": 4, "minutes": 8},
+    {"key": "exam", "nameEn": "Before an exam", "nameTr": "Sınav öncesi hazırlık", "steps": 4, "minutes": 17},
+    {"key": "oneRoom", "nameEn": "One room tidy", "nameTr": "Tek oda toparlama", "steps": 3, "minutes": 10},
+    {"key": "windDown", "nameEn": "Screen wind down", "nameTr": "Ekrandan kopuş", "steps": 4, "minutes": 13}
+  ],
+  "packs": [
+    {"key": "quick-morning", "nameEn": "Short morning", "nameTr": "Kısa sabah", "steps": 2, "minutes": 12},
+    {"key": "work-shift", "nameEn": "Home to work", "nameTr": "Evden işe geçiş", "steps": 3, "minutes": 52},
+    {"key": "exam-week", "nameEn": "Exam week", "nameTr": "Sınav haftası", "steps": 3, "minutes": 91}
+  ]
+}

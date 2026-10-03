@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Try a three step routine · DayPlay</title>
+<meta name="description" content="Play a three step routine right here: one step on screen, a big countdown, one button. No account, nothing installed.">
+<link rel="canonical" href="https://halilberkayy.github.io/dayplay/try.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DayPlay">
+<meta property="og:title" content="Try a three step routine · DayPlay">
+<meta property="og:description" content="One step on screen, a big countdown, one button.">
+<meta property="og:url" content="https://halilberkayy.github.io/dayplay/try.html">
+<meta property="og:image" content="https://halilberkayy.github.io/dayplay/assets/og/try.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://halilberkayy.github.io/dayplay/assets/og/try.png">
+<meta name="apple-itunes-app" content="app-id=6798274759">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.player { text-align: center; padding: 2rem 1rem; }
+.player .step { font-size: 1.6rem; font-weight: 700; margin: 0 0 .25rem; }
+.player .clock { font-size: 3.6rem; font-weight: 700; line-height: 1;
+  font-variant-numeric: tabular-nums; margin: .5rem 0 .25rem; }
+.player .label { opacity: .7; font-size: .9rem; }
+.player .bar { height: 6px; border-radius: 4px; background: rgba(127,127,127,.25);
+  overflow: hidden; margin: 1.25rem auto 0; max-width: 320px; }
+.player .bar > i { display: block; height: 100%; width: 0;
+  background: currentColor; transition: width .4s linear; }
+.actions { display: flex; gap: .5rem; justify-content: center;
+  margin-top: 1.25rem; flex-wrap: wrap; }
+.actions button { font: inherit; padding: .7rem 1.2rem; border-radius: 999px;
+  border: 1px solid rgba(127,127,127,.35); background: transparent;
+  color: inherit; cursor: pointer; }
+.actions button.primary { border-color: transparent; background: currentColor; }
+.actions button.primary span { color: canvas; }
+.upnext { min-height: 1.4em; opacity: .7; font-size: .9rem; margin-top: .75rem; }
+.pickers { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap;
+  margin-top: 1rem; }
+.pickers button[aria-pressed="true"] { border-color: currentColor; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand">DayPlay<span>Try three steps</span></div>
+</header>
+<nav><a href="index.html">DayPlay</a><a href="t/index.html">Routines</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+<main>
+<h1>Play a three step routine right here</h1>
+<p class="lede">This is the whole idea of the app in one screen: one step, a big
+countdown, one button. Nothing is installed, no account, and nothing you do
+here is stored or sent anywhere.</p>
+
+<div class="card player" id="player">
+  <p class="step" id="step">Pick a routine below</p>
+  <p class="clock" id="clock">00:00</p>
+  <p class="label" id="label">ready</p>
+  <div class="bar"><i id="bar"></i></div>
+  <p class="upnext" id="upnext"></p>
+  <div class="actions">
+    <button id="start" class="primary"><span>Start</span></button>
+    <button id="done" hidden>Done</button>
+    <button id="reset" hidden>Reset</button>
+  </div>
+  <div class="pickers" id="pickers"></div>
+</div>
+
+<p><a class="cta" href="https://apps.apple.com/app/id6798274759">Get the real thing on the App Store</a></p>
+<p>The app adds what a web page cannot: an alarm that rings through Silent mode
+and Focus, mission lock that keeps it ringing until step one is done, your own
+routines, and an honest record of how long things actually take.</p>
+
+<div class="lang" lang="tr">
+<h2>Türkçe</h2>
+<p>Uygulamanın tamamı tek ekranda: tek adım, büyük geri sayım, tek buton.
+Kurulum yok, hesap yok, burada yaptığın hiçbir şey kaydedilmiyor ya da bir
+yere gönderilmiyor.</p>
+<p>Uygulamanın web sayfasında olamayacak kısmı şu: sessiz modu ve Odak'ı delen
+gerçek alarm, ilk adım bitene kadar susmayan görev kilidi, kendi rutinlerin ve
+işlerin gerçekte ne kadar sürdüğünün dürüst kaydı.</p>
+</div>
+</main>
+<footer>
+  DayPlay is built by Halil Berkay Şahin.
+  Contact: <a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a><br>
+  DayPlay is a focus and routine tool. It is not a medical treatment or
+  diagnostic tool.
+</footer>
+</div>
+
+<script>
+// Üç adımlık mini player. Amaç uygulamanın değerini GÖSTERMEK; ikinci bir
+// planlama ürünü değil. Bu yüzden: kayıt yok, sunucu yok, localStorage yok.
+(function () {
+  var ROUTINES = [
+    { key: 'morning5', name: '5 minute morning',
+      steps: [['Get on your feet', 60], ['Drink water', 60], ['Wash your face', 120]] },
+    { key: 'leave', name: 'Out the door',
+      steps: [['Wallet, keys, phone', 60], ['Pack the bag', 180], ['Shoes and coat', 120]] },
+    { key: 'reset', name: 'Midday reset',
+      steps: [['Stand up and stretch', 120], ['Drink water', 60], ['Pick the next task', 120]] }
+  ];
+
+  var el = {
+    step: document.getElementById('step'),
+    clock: document.getElementById('clock'),
+    label: document.getElementById('label'),
+    bar: document.getElementById('bar'),
+    upnext: document.getElementById('upnext'),
+    start: document.getElementById('start'),
+    done: document.getElementById('done'),
+    reset: document.getElementById('reset'),
+    pickers: document.getElementById('pickers')
+  };
+
+  var routine = ROUTINES[0], index = 0, left = 0, timer = null;
+
+  function fmt(s) {
+    var a = Math.abs(s);
+    return (s < 0 ? '+' : '') +
+      String(Math.floor(a / 60)).padStart(2, '0') + ':' +
+      String(a % 60).padStart(2, '0');
+  }
+
+  function render() {
+    var step = routine.steps[index];
+    if (!step) {
+      el.step.textContent = 'Done. That is the whole loop.';
+      el.clock.textContent = '00:00';
+      el.label.textContent = 'finished';
+      el.bar.style.width = '100%';
+      el.upnext.textContent = 'In the app this is where your real timing shows up.';
+      el.done.hidden = true;
+      el.reset.hidden = false;
+      return;
+    }
+    el.step.textContent = step[0];
+    el.clock.textContent = fmt(left);
+    el.label.textContent = left < 0 ? 'over, and that is fine' : 'remaining';
+    el.bar.style.width = Math.min(100, ((step[1] - left) / step[1]) * 100) + '%';
+    var next = routine.steps[index + 1];
+    el.upnext.textContent = next ? 'Up next: ' + next[0] : 'Last step';
+  }
+
+  function tick() {
+    left -= 1;
+    render();
+  }
+
+  function startStep() {
+    left = routine.steps[index][1];
+    clearInterval(timer);
+    timer = setInterval(tick, 1000);
+    el.start.hidden = true;
+    el.done.hidden = false;
+    el.reset.hidden = false;
+    render();
+  }
+
+  el.start.addEventListener('click', function () { index = 0; startStep(); });
+  el.done.addEventListener('click', function () {
+    index += 1;
+    if (index >= routine.steps.length) {
+      clearInterval(timer);
+      render();
+      return;
+    }
+    startStep();
+  });
+  el.reset.addEventListener('click', function () {
+    clearInterval(timer);
+    index = 0;
+    left = 0;
+    el.start.hidden = false;
+    el.done.hidden = true;
+    el.reset.hidden = true;
+    el.step.textContent = routine.name;
+    el.clock.textContent = '00:00';
+    el.label.textContent = 'ready';
+    el.bar.style.width = '0';
+    el.upnext.textContent = '';
+  });
+
+  ROUTINES.forEach(function (r) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = r.name;
+    b.setAttribute('aria-pressed', String(r === routine));
+    b.addEventListener('click', function () {
+      routine = r;
+      Array.prototype.forEach.call(el.pickers.children, function (c) {
+        c.setAttribute('aria-pressed', String(c === b));
+      });
+      el.reset.click();
+      el.step.textContent = r.name;
+    });
+    el.pickers.appendChild(b);
+  });
+
+  el.step.textContent = routine.name;
+})();
+</script>
+</body>
+</html>

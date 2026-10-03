@@ -1,13 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://halilberkayy.github.io/dayplay/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://halilberkayy.github.io/dayplay/privacy.html</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://halilberkayy.github.io/dayplay/terms.html</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://halilberkayy.github.io/dayplay/support.html</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://halilberkayy.github.io/dayplay/p/quick-morning.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://halilberkayy.github.io/dayplay/p/work-shift.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://halilberkayy.github.io/dayplay/p/exam-week.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://halilberkayy.github.io/dayplay/try.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://halilberkayy.github.io/dayplay/t/</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://halilberkayy.github.io/dayplay/t/morning.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://halilberkayy.github.io/dayplay/t/evening.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
@@ -20,4 +13,3 @@
   <url><loc>https://halilberkayy.github.io/dayplay/t/exam.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://halilberkayy.github.io/dayplay/t/oneRoom.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://halilberkayy.github.io/dayplay/t/windDown.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-</urlset>
