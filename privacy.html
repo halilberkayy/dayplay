@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · DayPlay</title>
-<meta name="description" content="What DayPlay stores on your device, the small set of anonymous counters that leave it, and how to switch them off. GDPR and KVKK.">
+<meta name="description" content="What DayPlay keeps on your device, the usage counters, crash reports and subscription checks that leave it, and how to switch counters off. GDPR and KVKK.">
 <link rel="canonical" href="https://halilberkayy.github.io/dayplay/privacy.html">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="author" content="Halil Berkay Şahin">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DayPlay">
 <meta property="og:title" content="Privacy Policy · DayPlay">
-<meta property="og:description" content="What DayPlay stores on your device, the small set of anonymous counters that leave it, and how to switch them off. GDPR and KVKK.">
+<meta property="og:description" content="What DayPlay keeps on your device, the usage counters, crash reports and subscription checks that leave it, and how to switch counters off. GDPR and KVKK.">
 <meta property="og:url" content="https://halilberkayy.github.io/dayplay/privacy.html">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="tr_TR">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Privacy Policy · DayPlay">
-<meta name="twitter:description" content="What DayPlay stores on your device, the small set of anonymous counters that leave it, and how to switch them off. GDPR and KVKK.">
+<meta name="twitter:description" content="What DayPlay keeps on your device, the usage counters, crash reports and subscription checks that leave it, and how to switch counters off. GDPR and KVKK.">
 <meta name="apple-itunes-app" content="app-id=6798274759">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/style.css">
@@ -33,14 +33,16 @@
 <h1>Privacy Policy</h1>
 
 
-<span class="updated">Last updated: 2026-10-21</span>
+<span class="updated">Last updated: 2026-10-30</span>
 
 <div class="card">
 <h2>The short version</h2>
-<p>Your routines, step names, schedules and history stay on your device and are
-never sent anywhere. There is no account and no DayPlay server. What does leave
-the device is a small set of anonymous usage counters and subscription events,
-and you can switch the counters off in Settings.</p>
+<p>Your routines, step names, schedules, history and proof photo stay on your
+device and are never sent anywhere. There is no account and no DayPlay server.
+What leaves the device is a small set of usage counters, crash reports and
+subscription checks. They are tied to random IDs created for this installation
+and to a device ID, not to your name or email. You can switch usage counters and
+crash reports off in Settings.</p>
 </div>
 
 <h2>Who is responsible for your data</h2>
@@ -65,14 +67,18 @@ iOS app and this website.</p>
 <p>This data lives in the app container. Deleting DayPlay deletes all of it.
 You can export a copy at any time from Settings, and that export goes wherever
 you choose to send it. <strong>We never receive it.</strong></p>
+<p>If you back up your iPhone to iCloud or a computer, that backup includes
+DayPlay's on-device data, including the proof photo. Apple, not DayPlay, holds
+those backups.</p>
 
 <h2>What leaves your device</h2>
 <table>
 <tr><th>Data</th><th>Why</th><th>Who processes it</th><th>Legal basis (GDPR)</th></tr>
 <tr>
-  <td>Anonymous usage counters: which screen opened, whether an alarm rang,
-      whether the first step was finished, which paywall was shown. Never
-      routine or step names.</td>
+  <td>Usage counters: which screen opened, whether an alarm rang, whether the
+      first step was finished, which paywall was shown. Never routine or step
+      names. Sent with a random ID for this installation, device model, iOS and
+      app version.</td>
   <td>To see where the app fails people and fix it</td>
   <td>Mixpanel (EU servers)</td>
   <td>Legitimate interest, Art. 6(1)(f). You can object at any time by turning
@@ -81,53 +87,73 @@ you choose to send it. <strong>We never receive it.</strong></p>
 <tr>
   <td>Subscription events: which plan, trial start, renewal, cancellation</td>
   <td>To keep DayPlay Pro unlocked on your device and to measure revenue</td>
-  <td>RevenueCat, Superwall</td>
+  <td>RevenueCat</td>
   <td>Performance of a contract, Art. 6(1)(b)</td>
 </tr>
 <tr>
   <td>Crash reports: the stack trace, the error type, device model and iOS
       version at the moment of a crash or a handled error. Never the error
-      message text, never routine or step names.</td>
+      message text, never routine or step names. Sent with an installation
+      ID.</td>
   <td>To find and fix crashes, especially in alarms</td>
   <td>Firebase Crashlytics (Google)</td>
   <td>Legitimate interest, Art. 6(1)(f). The same Settings switch that turns
       usage counters off also turns crash reports off.</td>
 </tr>
 <tr>
-  <td>Diagnostics from the purchase and analytics SDKs</td>
-  <td>To keep purchases and counters working</td>
-  <td>RevenueCat, Superwall, Mixpanel</td>
-  <td>Legitimate interest, Art. 6(1)(f)</td>
+  <td>Identifiers: a random ID per installation (Mixpanel, RevenueCat,
+      Firebase), the device's identifier for vendor (IDFV, RevenueCat), and the
+      App Store's app transaction ID for your Apple Account (RevenueCat, to
+      verify purchases)</td>
+  <td>To keep purchases and diagnostics working and to count events per
+      installation</td>
+  <td>RevenueCat, Mixpanel, Firebase Crashlytics</td>
+  <td>Performance of a contract, Art. 6(1)(b), for purchase checks; legitimate
+      interest, Art. 6(1)(f), for the rest</td>
 </tr>
 </table>
-<p>None of this is linked to a name, an email address, or an account, because
-DayPlay has no accounts. We do not use the advertising identifier and the App
-Tracking Transparency prompt is never shown.</p>
+<p>None of this contains your name, email or an account. It is pseudonymous:
+the IDs above let a provider tell one installation from another, so privacy law
+treats it as personal data. We do not use the advertising identifier, we do not
+track you across other companies' apps, and the App Tracking Transparency prompt
+is never shown.</p>
+
+<h2>Location</h2>
+<p>DayPlay never asks for your location. Our providers see your IP address when
+your phone connects to them. From version 1.6.1, Mixpanel is told not to use it
+for location and DayPlay no longer uses Superwall. Versions up to 1.6 let
+Mixpanel and Superwall derive an approximate city, region and country from
+it.</p>
 
 <h2>Turning counters off</h2>
-<p>Settings &gt; Privacy &gt; Usage counters. When it is off, nothing is sent,
-crash reports included.
-No feature of the app changes. The same screen has a button that copies the
-exact events recorded on your device so you can read them yourself.</p>
+<p>Settings &gt; Privacy &gt; Usage counters. When it is off, usage counters and
+crash reports stop. RevenueCat still checks your subscription with Apple,
+because DayPlay Pro cannot work without it. No other feature changes. The same
+screen copies the events recorded on your device so you can read them; the
+providers add device model, iOS version and the IDs above.</p>
 
 <h2>How long it is kept</h2>
 <p>Usage counters are retained for at most 24 months and then deleted. Crash
 reports are kept by Firebase for 90 days.
 Subscription records are kept for the life of the subscription plus the period
 required by tax and consumer protection law. On device data is kept until you
-delete it or delete the app.</p>
+delete it or delete the app. Firebase keeps installation IDs until we delete
+them.</p>
 
 <h2>International transfers</h2>
-<p>Mixpanel processes DayPlay data on servers in the European Union. RevenueCat,
-Superwall and Google (Firebase Crashlytics) process data in the United States
-under Standard Contractual Clauses. Apple processes payments under its own terms.</p>
+<p>Mixpanel processes DayPlay data on servers in the European Union. RevenueCat
+and Google (Firebase Crashlytics) process data in the United States under
+Standard Contractual Clauses. Up to version 1.6, Superwall (United States) also
+received data. Apple processes payments under its own terms.</p>
 
 <h2>Your rights</h2>
 <p>Under the GDPR and, in Türkiye, under KVKK Article 11, you can ask for access,
 rectification, erasure, restriction, portability, and you can object to
 processing. Write to <a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a>; we answer within
-30 days. Because there is no account, please tell us your device model and the
-approximate first install date so we can locate any records. You can also
+30 days. Because there is no account, the providers keep these records under
+random IDs that we cannot match to you from an e-mail alone. Write to us anyway:
+we will delete what we can locate, tell you what we could not, and turning Usage
+counters off stops new records. You can also
 complain to your local supervisory authority, or in Türkiye to the KVKK
 authority (kvkk.gov.tr).</p>
 
@@ -139,7 +165,8 @@ everything else in the app keeps working.</p>
 <h2>Purchases</h2>
 <p>DayPlay Pro is sold through Apple's In App Purchase. Apple processes the
 payment; we never see your name, card, or Apple ID. RevenueCat receives the
-purchase receipt from Apple so the app can tell whether Pro is active.</p>
+purchase receipt and the App Store's app transaction ID from Apple so the app
+can tell whether Pro is active.</p>
 
 <h2>Children</h2>
 <p>DayPlay is not directed at children under 13 and asks for no personal
@@ -154,7 +181,7 @@ version ships.</p>
 <p><a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a></p>
 
 <div class="lang" lang="tr">
-<h2>Türkçe — KVKK Aydınlatma Metni</h2>
+<h2>Türkçe: KVKK Aydınlatma Metni</h2>
 <p><strong>Veri sorumlusu:</strong> Halil Berkay Şahin (TheCodevolt), Türkiye.
 İletişim: <a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a></p>
 
@@ -165,48 +192,68 @@ telefonunda Apple Vision ile karşılaştırılır; sonraki eşleşmelere yardı
 yalnız görüntü özellikleri tutulabilir, fotoğrafın kendisi saklanmaz, hiçbir şey
 yüklenmez. Kamera yalnız bunun için kullanılır. Bunlar yalnız telefonundaki uygulama alanında durur;
 uygulamayı silmek hepsini siler. Bizim bir sunucumuz yok, bu verilere
-erişemeyiz.</p>
+erişemeyiz. iPhone'unu iCloud'a ya da bilgisayara yedekliyorsan bu yedek, kanıt
+fotoğrafı dahil DayPlay'in cihazdaki verilerini de içerir; bu yedekleri DayPlay
+değil Apple tutar.</p>
 
 <p><strong>Cihazından çıkanlar, amacı ve hukuki sebebi:</strong></p>
 <ul>
-  <li><strong>Anonim kullanım sayaçları</strong> (hangi ekran açıldı, alarm çaldı
-      mı, ilk adım bitti mi, hangi paywall gösterildi). Rutin ve adım ADLARI
-      buraya asla girmez. Amaç: uygulamanın nerede işe yaramadığını görüp
-      düzeltmek. Hukuki sebep: KVKK m.5/2-f (meşru menfaat). İşleyen: Mixpanel,
-      AB sunucuları. <em>Ayarlar &gt; Mahremiyet &gt; Kullanım sayaçları</em>'ndan
-      tek dokunuşla kapatabilirsin; kapattığında hiçbir şey gönderilmez.</li>
+  <li><strong>Kullanım sayaçları</strong> (hangi ekran açıldı, alarm çaldı mı,
+      ilk adım bitti mi, hangi paywall gösterildi). Rutin ve adım ADLARI
+      buraya asla girmez. Bu kuruluma özel rastgele bir kimlikle, cihaz modeli,
+      iOS ve uygulama sürümüyle birlikte gider. Amaç: uygulamanın nerede işe
+      yaramadığını görüp düzeltmek. Hukuki sebep: KVKK m.5/2-f (meşru
+      menfaat). İşleyen: Mixpanel, AB sunucuları. <em>Ayarlar &gt; Mahremiyet
+      &gt; Kullanım sayaçları</em>'ndan tek dokunuşla kapatabilirsin;
+      kapattığında kullanım sayaçları ve çökme raporları gönderilmez; abonelik
+      doğrulaması sürer.</li>
   <li><strong>Abonelik olayları</strong> (hangi plan, deneme başlangıcı,
       yenileme, iptal). Amaç: Pro hakkını cihazında açık tutmak. Hukuki sebep:
-      KVKK m.5/2-c (sözleşmenin ifası). İşleyen: RevenueCat, Superwall.</li>
+      KVKK m.5/2-c (sözleşmenin ifası). İşleyen: RevenueCat.</li>
   <li><strong>Çökme raporu</strong> (çökme ya da yakalanan hata anındaki
       yığın izi, hata türü, cihaz modeli, iOS sürümü). Hata mesajının metni ve
       rutin/adım adları gitmez. Amaç: çökmeyi, özellikle alarmdakini,
       bulup gidermek. Hukuki sebep: KVKK m.5/2-f. İşleyen: Firebase
       Crashlytics (Google). Kullanım sayaçlarını kapatan anahtar bunu da
       kapatır.</li>
-  <li><strong>Satın alma ve analitik SDK'larının teşhis verisi.</strong>
-      Amaç: satın almanın ve sayaçların çalışması. Hukuki sebep: KVKK
-      m.5/2-f. İşleyen: RevenueCat, Superwall, Mixpanel.</li>
+  <li><strong>Kimlikler:</strong> bu kuruluma özel rastgele kimlikler
+      (Mixpanel, RevenueCat, Firebase), cihazın satıcı kimliği (IDFV,
+      RevenueCat) ve Apple hesabına bağlı uygulama işlem kimliği (App Store app
+      transaction ID, RevenueCat, satın alma doğrulaması için). Amaç: satın
+      almanın ve teşhisin çalışması, olayların kurulum bazında sayılması.
+      Hukuki sebep: satın alma doğrulaması için KVKK m.5/2-c, diğerleri için
+      m.5/2-f. İşleyen: RevenueCat, Mixpanel, Firebase Crashlytics.</li>
 </ul>
-<p>Hiçbiri ad, e-posta ya da hesapla ilişkilendirilmez; DayPlay'de hesap yoktur.
-Reklam kimliği kullanılmaz, uygulamalar arası izleme yapılmaz, ATT izni hiç
-istenmez.</p>
+<p>Hiçbiri adını, e-postanı ya da bir hesabı içermez. Takma adlı (pseudonim)
+veridir: yukarıdaki kimlikler bir kurulumu diğerinden ayırt etmeye yarar, bu
+yüzden kişisel veri sayılır. Reklam kimliği kullanılmaz, başka şirketlerin
+uygulamaları arasında izleme yapılmaz, ATT izni hiç istenmez.</p>
+
+<p><strong>Konum:</strong> DayPlay konum izni istemez. Telefonun servislere
+bağlanırken IP adresin görünür. 1.6.1 sürümünden itibaren Mixpanel'e bunu konum
+için kullanmaması söylenir ve DayPlay Superwall kullanmaz. 1.6 ve öncesi
+sürümlerde Mixpanel ve Superwall IP adresinden yaklaşık şehir, bölge ve ülke
+çıkarıyordu.</p>
 
 <p><strong>Saklama süresi:</strong> kullanım sayaçları en fazla 24 ay; çökme
 raporları 90 gün (Firebase); abonelik
 kayıtları abonelik süresi + vergi ve tüketici mevzuatının gerektirdiği süre;
-cihazdaki veriler sen silene kadar.</p>
+cihazdaki veriler sen silene kadar. Firebase kurulum kimliklerini biz silene
+kadar tutar.</p>
 
 <p><strong>Yurt dışına aktarım:</strong> Mixpanel verileri Avrupa Birliği'nde
-işler. RevenueCat, Superwall ve Google (Firebase Crashlytics) Amerika Birleşik
-Devletleri'nde, Standart Sözleşme Hükümleri kapsamında işler. Ödemeyi Apple kendi koşullarıyla işler.</p>
+işler. RevenueCat ve Google (Firebase Crashlytics) Amerika Birleşik
+Devletleri'nde, Standart Sözleşme Hükümleri kapsamında işler. 1.6 ve öncesi
+sürümlerde Superwall (ABD) de veri alıyordu. Ödemeyi Apple kendi koşullarıyla işler.</p>
 
 <p><strong>KVKK m.11 hakların:</strong> kişisel verilerinin işlenip işlenmediğini
 öğrenme, bilgi talep etme, işlenme amacını öğrenme, düzeltilmesini veya
 silinmesini isteme, işlemeye itiraz etme ve zararın giderilmesini talep etme.
 Başvuru: <a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a>; en geç 30 gün içinde
-cevaplarız. Hesap olmadığı için kaydı bulabilmemiz adına cihaz modelini ve
-yaklaşık ilk kurulum tarihini yazmanı rica ederiz. Ayrıca
+cevaplarız. Hesap olmadığı için servisler bu kayıtları, yalnız e-postandan
+sana eşleyemediğimiz rastgele kimliklerle tutar. Yine de yaz: bulabildiğimizi
+sileriz, bulamadığımızı söyleriz; Kullanım sayaçları'nı kapatmak yeni kayıt
+oluşmasını durdurur. Ayrıca
 <a href="https://www.kvkk.gov.tr">kvkk.gov.tr</a> üzerinden Kişisel Verileri
 Koruma Kurumu'na şikâyette bulunabilirsin.</p>
 </div>

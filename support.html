@@ -30,7 +30,7 @@
       "name": "Does DayPlay ring when my iPhone is on silent?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. On iOS 26 and later DayPlay uses Apple's AlarmKit, the same framework the built in Clock app uses, so the alarm rings through Silent mode, Focus and Do Not Disturb. On iOS 25 and earlier DayPlay falls back to a burst of time sensitive notifications, which does not break Silent mode, and the app tells you so on screen."
+        "text": "Yes. On iOS 26 and later DayPlay uses AlarmKit, Apple's system alarm framework, so the alarm rings through Silent mode, Focus and Do Not Disturb. On iOS 18 and earlier DayPlay falls back to a burst of notifications, which does not break Silent mode, and the app tells you so on screen."
       }
     },
     {
@@ -38,7 +38,7 @@
       "name": "What is mission lock?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mission lock means the alarm does not stop when you press stop. Pressing stop opens DayPlay on the first step of your routine and the alarm keeps ringing inside the app until that step is finished. There is no dismiss button while it is locked."
+        "text": "Mission lock means the alarm does not stop when you press stop. Pressing stop opens DayPlay on the first step of your routine and the alarm keeps ringing inside the app until you confirm that step or your morning proof photo matches. There is no dismiss button while it is locked."
       }
     },
     {
@@ -46,7 +46,7 @@
       "name": "Can I get around mission lock by force quitting the app?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not for long. When the mission is locked and the app is sent to the background, DayPlay schedules a one shot system alarm about 90 seconds later, so force quitting delays the alarm instead of ending it."
+        "text": "Not for long. When the mission is locked, DayPlay keeps a backup system alarm about 30 seconds ahead and pulls it to about 3 seconds when you leave the app, so force quitting delays the alarm instead of ending it."
       }
     },
     {
@@ -62,7 +62,7 @@
       "name": "My alarm did not ring",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Check iOS Settings, DayPlay, and make sure Alarms are allowed. If you are on iOS 25 or earlier there is no system alarm permission and DayPlay uses notifications instead, so Focus modes, Low Power Mode and Scheduled Summary can hold it back."
+        "text": "Check iOS Settings, DayPlay, and make sure Alarms are allowed. If you are on iOS 18 or earlier there is no system alarm permission and DayPlay uses notifications instead, so Focus modes, Low Power Mode and Scheduled Summary can hold it back."
       }
     },
     {
@@ -102,7 +102,7 @@
       "name": "How do I delete my data?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Delete the app. Everything DayPlay stores on your device lives in its own container, so removing the app removes all of it. To stop the anonymous usage counters without deleting the app, turn them off in Settings, Privacy."
+        "text": "Delete the app to remove your routines, history and settings from the device. Deleting the app does not cancel DayPlay Pro; cancel it first in iOS Settings, your name, Subscriptions. Usage counters, crash reports and subscription records held by the services named in our privacy policy are kept for the periods stated there; to have them erased, email info@thecodevolt.com. To stop usage counters and crash reports without deleting the app, turn them off in Settings, Privacy."
       }
     }
   ]
@@ -131,15 +131,15 @@ device model. It saves a round trip.</p>
 
 <h2>Common questions</h2>
 <h3>Does DayPlay ring when my iPhone is on silent?</h3>
-<p>Yes. On iOS 26 and later DayPlay uses Apple's AlarmKit, the same framework the built in Clock app uses, so the alarm rings through Silent mode, Focus and Do Not Disturb. On iOS 25 and earlier DayPlay falls back to a burst of time sensitive notifications, which does not break Silent mode, and the app tells you so on screen.</p>
+<p>Yes. On iOS 26 and later DayPlay uses AlarmKit, Apple's system alarm framework, so the alarm rings through Silent mode, Focus and Do Not Disturb. On iOS 18 and earlier DayPlay falls back to a burst of notifications, which does not break Silent mode, and the app tells you so on screen.</p>
 <h3>What is mission lock?</h3>
-<p>Mission lock means the alarm does not stop when you press stop. Pressing stop opens DayPlay on the first step of your routine and the alarm keeps ringing inside the app until that step is finished. There is no dismiss button while it is locked.</p>
+<p>Mission lock means the alarm does not stop when you press stop. Pressing stop opens DayPlay on the first step of your routine and the alarm keeps ringing inside the app until you confirm that step or your morning proof photo matches. There is no dismiss button while it is locked.</p>
 <h3>Can I get around mission lock by force quitting the app?</h3>
-<p>Not for long. When the mission is locked and the app is sent to the background, DayPlay schedules a one shot system alarm about 90 seconds later, so force quitting delays the alarm instead of ending it.</p>
+<p>Not for long. When the mission is locked, DayPlay keeps a backup system alarm about 30 seconds ahead and pulls it to about 3 seconds when you leave the app, so force quitting delays the alarm instead of ending it.</p>
 <h3>How many times can I snooze?</h3>
 <p>You choose, from zero to three, per routine. Snoozes are counted. When they run out the snooze button is not shown at all.</p>
 <h3>My alarm did not ring</h3>
-<p>Check iOS Settings, DayPlay, and make sure Alarms are allowed. If you are on iOS 25 or earlier there is no system alarm permission and DayPlay uses notifications instead, so Focus modes, Low Power Mode and Scheduled Summary can hold it back.</p>
+<p>Check iOS Settings, DayPlay, and make sure Alarms are allowed. If you are on iOS 18 or earlier there is no system alarm permission and DayPlay uses notifications instead, so Focus modes, Low Power Mode and Scheduled Summary can hold it back.</p>
 <h3>I paid but Pro is not on</h3>
 <p>Open Settings in the app and tap Restore purchase. Make sure you are signed in with the same Apple ID used for the purchase. If it still does not appear, email info@thecodevolt.com with the date of purchase.</p>
 <h3>How do I cancel my subscription?</h3>
@@ -149,22 +149,23 @@ device model. It saves a round trip.</p>
 <h3>Does DayPlay treat ADHD?</h3>
 <p>No. It is a focus and routine tool designed to be friendly to ADHD brains. It is not a medical treatment or a diagnostic tool.</p>
 <h3>How do I delete my data?</h3>
-<p>Delete the app. Everything DayPlay stores on your device lives in its own container, so removing the app removes all of it. To stop the anonymous usage counters without deleting the app, turn them off in Settings, Privacy.</p>
+<p>Delete the app to remove your routines, history and settings from the device. Deleting the app does not cancel DayPlay Pro; cancel it first in iOS Settings, your name, Subscriptions. Usage counters, crash reports and subscription records held by the services named in our privacy policy are kept for the periods stated there; to have them erased, email info@thecodevolt.com. To stop usage counters and crash reports without deleting the app, turn them off in Settings, Privacy.</p>
 
 <div class="lang" lang="tr">
 <h2>Türkçe</h2>
 <h3>Sessiz moddayken alarm çalar mı?</h3>
-<p>iOS 26 ve üstünde evet: DayPlay, Saat uygulamasının kullandığı AlarmKit
-altyapısını kullanır, yani sessiz modu, Odak'ı ve Rahatsız Etmeyin'i deler.
-iOS 25 ve altında sistem alarmı yoktur; uygulama bildirim salvosuna düşer,
-sessiz modu delmez ve bunu ekranda açıkça söyler.</p>
+<p>iOS 26 ve üstünde evet: DayPlay, Apple'ın sistem alarmı altyapısı AlarmKit'i
+kullanır, yani sessiz modu, Odak'ı ve Rahatsız Etmeyin'i deler. iOS 18 ve
+altında sistem alarmı yoktur; uygulama bildirim salvosuna düşer, sessiz modu
+delmez ve bunu ekranda açıkça söyler.</p>
 <h3>Görev kilidi nedir?</h3>
 <p>Alarmın "durdur" butonu seni yatağa değil rutinin ilk adımına götürür ve
-alarm o adım bitene kadar uygulama içinde çalmaya devam eder. Kilit açıkken
+alarm o adımı onaylayana ya da sabah kanıtı fotoğrafın eşleşene kadar
+uygulama içinde çalmaya devam eder. Kilit açıkken
 kapatma butonu yoktur.</p>
 <h3>Uygulamayı kapatırsam alarm susar mı?</h3>
-<p>Uzun süre değil. Kilit açıkken uygulama arka plana atılırsa DayPlay yaklaşık
-90 saniye sonrası için tek seferlik bir sistem alarmı kurar; kapatmak alarmı
+<p>Uzun süre değil. Kilit açıkken DayPlay yaklaşık 30 saniye ileride bir yedek
+sistem alarmı tutar, uygulamadan çıkınca bunu 3 saniyeye çeker; kapatmak alarmı
 bitirmez, geciktirir.</p>
 <h3>Kaç kez erteleyebilirim?</h3>
 <p>Rutin başına sen seçersin: 0 ile 3 arası. Haklar sayılır, bitince erteleme
@@ -173,11 +174,16 @@ butonu hiç çizilmez.</p>
 <p>iOS Ayarlar &gt; adın &gt; Abonelikler &gt; DayPlay. Ya da uygulama
 Ayarlar'ından "Aboneliği yönet". İptal, bir sonraki yenilemeyi durdurur.</p>
 <h3>Verimi nasıl silerim?</h3>
-<p>Uygulamayı silmen yeterli; sunucuda kopya yok. Uygulamayı silmeden yalnız
-anonim sayaçları durdurmak istersen Ayarlar &gt; Mahremiyet &gt; Kullanım
-sayaçları'nı kapat.</p>
+<p>Uygulamayı silmek rutinlerini, geçmişini ve ayarlarını cihazdan siler.
+Uygulamayı silmek DayPlay Pro aboneliğini iptal etmez; önce iOS Ayarlar &gt;
+adın &gt; Abonelikler'den iptal et. Gizlilik politikamızda adı geçen
+servislerin tuttuğu kullanım sayaçları, çökme raporları ve abonelik kayıtları
+orada yazan süre boyunca saklanır; silinmelerini istersen
+<a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a> adresine yaz. Uygulamayı silmeden
+kullanım sayaçlarını ve çökme raporlarını durdurmak için Ayarlar &gt;
+Mahremiyet &gt; Kullanım sayaçları'nı kapat.</p>
 <p>Diğer her şey için:
-<a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a> — uygulama sürümünü (Ayarlar'ın en
+<a href="mailto:info@thecodevolt.com">info@thecodevolt.com</a>; uygulama sürümünü (Ayarlar'ın en
 altında), iOS sürümünü ve cihaz modelini eklersen daha hızlı çözeriz.</p>
 </div>
 
