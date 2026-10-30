@@ -25,10 +25,15 @@
   routine limit, adds timing suggestions, a 30-day comparison, extra theme
   packs and flexible streak protection.
 - Languages: English and Turkish.
+- Moving to a new phone: Settings > Backup and restore > Create backup on the
+  old phone, then Choose a file on the new one.
 - DayPlay is not a medical device and does not diagnose or treat ADHD.
 
 ## Links
 - Home: https://halilberkayy.github.io/dayplay/
+- Home in Turkish: https://halilberkayy.github.io/dayplay/tr/
+- Questions and comparison with the iPhone Clock app: https://halilberkayy.github.io/dayplay/#questions
+- Routine templates (steps and minutes): https://halilberkayy.github.io/dayplay/t/
 - Privacy policy: https://halilberkayy.github.io/dayplay/privacy.html
 - Terms of use: https://halilberkayy.github.io/dayplay/terms.html
 - Support and FAQ: https://halilberkayy.github.io/dayplay/support.html

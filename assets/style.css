@@ -183,4 +183,9 @@ th {
   color: var(--ink-2);
 }
 
+/* Ana sayfa karşılaştırması: üç dar sütun telefona sığsın, kaymasın. */
+table.compare { display: table; table-layout: fixed; }
+table.compare th, table.compare td { min-width: 0; padding: 8px 10px; }
+table.compare thead th:first-child { width: 30%; }
+
 .lang h3 { font-size: 15px; }
